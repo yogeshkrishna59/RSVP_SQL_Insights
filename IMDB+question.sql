@@ -14,34 +14,27 @@ USE imdb;
 -- Type your code below:
 
 SELECT 
-    COUNT(*)
+    CONCAT('movie: ', COUNT(*)) AS Number_of_rows
 FROM
-    movie;
-
-SELECT 
-    COUNT(*)
+    movie 
+UNION SELECT 
+    CONCAT('genre: ', COUNT(*))
 FROM
-    genre; 
-    
-SELECT 
-    COUNT(*)
+    genre 
+UNION SELECT 
+    CONCAT('director_mapping: ', COUNT(*))
 FROM
-    director_mapping;
-
-SELECT 
-    COUNT(*)
+    director_mapping 
+UNION SELECT 
+    CONCAT('role_mapping: ', COUNT(*))
 FROM
-    role_mapping;
-
-
-SELECT 
-    COUNT(*)
+    role_mapping 
+UNION SELECT 
+    CONCAT('names: ', COUNT(*))
 FROM
-    names;
-
-
-SELECT 
-    COUNT(*)
+    names 
+UNION SELECT 
+    CONCAT('ratings: ', COUNT(*))
 FROM
     ratings;
 
